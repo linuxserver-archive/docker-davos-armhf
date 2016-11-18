@@ -10,9 +10,9 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
-# linuxserver/davos
-[![](https://images.microbadger.com/badges/version/linuxserver/davos.svg)](https://microbadger.com/images/linuxserver/davos "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/davos.svg)](http://microbadger.com/images/linuxserver/davos "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/davos.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/davos.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/job/Software/job/Davos/job/davos_40_Docker/badge/icon)](http://jenkins.linuxserver.io:8080/job/Software/job/Davos/job/davos_40_Docker/)
-[hub]: https://hub.docker.com/r/linuxserver/davos/
+# lsioarmhf/davos
+[![](https://images.microbadger.com/badges/version/lsioarmhf/davos.svg)](https://microbadger.com/images/lsioarmhf/davos "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/davos.svg)](http://microbadger.com/images/lsioarmhf/davos "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/davos.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/davos.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/job/Software/job/Davos/job/davos_41_Docker-armhf/badge/icon)](http://jenkins.linuxserver.io:8080/job/Software/job/Davos/job/davos_41_Docker-armhf/)
+[hub]: https://hub.docker.com/r/lsioarmhf/davos/
 
 _davos_ is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.
 
@@ -28,7 +28,7 @@ docker create \
   -v <path to downloads folder>:/download
   -e PGID=<gid> -e PUID=<uid>  \
   -p 8080:8080 \
-  linuxserver/davos
+  lsioarmhf/davos
 ```
 
 ## Parameters
@@ -72,8 +72,8 @@ The application does not require any set up other than starting the docker conta
 
 * image version number
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/davos`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmhf/davos`
 
 ## Versions
 
-+ **14.11.16:** Initial creation of documentation
++ **18.11.16:** Initial Release.
